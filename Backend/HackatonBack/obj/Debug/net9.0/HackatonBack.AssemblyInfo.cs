@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HackatonBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0136ef92d894b24cbc95ebcef643b835236bde3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f793f0abda67d52a04be0a03b2029a79a8563abe")]
 [assembly: System.Reflection.AssemblyProductAttribute("HackatonBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HackatonBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
