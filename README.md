@@ -1,1 +1,1 @@
-# team9-summer-hack
+AI SMM Manager
