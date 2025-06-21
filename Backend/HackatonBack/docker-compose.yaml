@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    db:
+      image: postgres
+      restart: always
+      container_name: postgres_db_hack
+      environment:
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: admin
+        POSTGRES_DB: db
+      volumes:
+        - ./data:/var/lib/postgresql/data
+      ports:
+        - 5232:5232
+    
+    ollama:
+      image: ollama/ollama:latest
+      container_name: ollama
+      ports:
+        - "11434:80"
+      volumes:
+        - ollama_data:/model_data
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [gpu]
+      environment:
+        - OLLAMA_HOST=0.0.0.0
+        - OLLAMA_NUM_PARALLEL=2
+        - OLLAMA_MAX_LOADED_MODELS=1
+      restart: unless-stopped
+      command: sh -c "ollama serve & sleep 5 && ollama pull llama3.2"
+volumes:
+  ollama_data:
+    name: ollama_data
