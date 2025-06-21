@@ -7,5 +7,4 @@ public class User
     public string? Company { get; set; }
     public string? Description { get; set; }
     
-    // Additional properties can be added as needed
 }
